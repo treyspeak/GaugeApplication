@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="gauge" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Circle radius="102.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#262626" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="center" radius="20.0" stroke="BLACK" strokeType="INSIDE">
+            <fill>
+                <RadialGradient centerX="0.5" centerY="0.25" radius="0.5">
+                    <stops>
+                        <Stop color="#494f53" />
+                        <Stop color="BLACK" offset="1.0" />
+                    </stops>
+                </RadialGradient>
+            </fill>
+        </Circle>
+        <Line rotate="142.0" startX="-14.0" stroke="WHITE" strokeWidth="2.0" translateX="-63.0" translateY="49.0" />
+        <Line rotate="40.0" startX="-14.0" stroke="WHITE" strokeWidth="2.0" translateX="63.0" translateY="49.0" />
+        <Line endX="8.0" rotate="-28.0" stroke="WHITE" translateX="-73.0" translateY="34.0" />
+        <Line endX="8.0" rotate="28.0" stroke="WHITE" translateX="73.0" translateY="34.0" />
+        <Line rotate="-14.0" startX="-14.0" stroke="WHITE" strokeWidth="2.0" translateX="-80.0" translateY="18.0" />
+        <Line rotate="14.0" startX="-14.0" stroke="WHITE" strokeWidth="2.0" translateX="80.0" translateY="18.0" />
+        <Line endX="8.0" stroke="WHITE" translateX="-82.0" translateY="-4.0" />
+        <Line endX="8.0" stroke="WHITE" translateX="82.0" translateY="-4.0" />
+        <Line rotate="14.0" startX="-14.0" stroke="WHITE" strokeWidth="2.0" translateX="-76.0" translateY="-25.0" />
+        <Line rotate="166.0" startX="-14.0" stroke="WHITE" strokeWidth="2.0" translateX="76.0" translateY="-25.0" />
+        <Line endX="8.0" rotate="28.0" stroke="WHITE" translateX="-69.0" translateY="-45.0" />
+        <Line endX="8.0" rotate="-28.0" stroke="WHITE" translateX="69.0" translateY="-45.0" />
+        <Line rotate="42.0" startX="-14.0" stroke="WHITE" strokeWidth="2.0" translateX="-56.0" translateY="-59.0" />
+        <Line rotate="-42.0" startX="-14.0" stroke="WHITE" strokeWidth="2.0" translateX="56.0" translateY="-59.0" />
+        <Line endX="8.0" rotate="62.0" stroke="WHITE" translateX="-40.0" translateY="-70.0" />
+        <Line endX="8.0" rotate="-62.0" stroke="WHITE" translateX="40.0" translateY="-70.0" />
+        <Line rotate="77.0" startX="-14.0" stroke="WHITE" strokeWidth="2.0" translateX="-23.0" translateY="-77.0" />
+        <Line rotate="-77.0" startX="-14.0" stroke="WHITE" strokeWidth="2.0" translateX="23.0" translateY="-77.0" />
+        <Line rotate="90.0" startX="8.0" stroke="WHITE" strokeWidth="2.0" translateY="-80.0" />
+        <ImageView fitHeight="20.0" fitWidth="20.0" translateY="75.0">
+            <image>
+                <Image url="@../image/uxlogo.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="237.0" fitWidth="237.0">
+            <image>
+                <Image url="@../image/ring.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="needle" rotate="-127.0" translateY="4.0">
+            <image>
+                <Image url="@../image/needle.png" />
+            </image>
+        </ImageView>
+        <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" text="Test" translateY="170.0" />
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0" translateX="-50.0" translateY="41.0" />
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" translateX="-65.0" translateY="14.0" />
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="2" translateX="-62.0" translateY="-20.0" />
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateX="-45.0" translateY="-46.0" />
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4" translateX="-18.0" translateY="-61.0" />
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" translateX="18.0" translateY="-61.0" />
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="6" translateX="45.0" translateY="-46.0" />
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="7" translateX="62.0" translateY="-20.0" />
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="8" translateX="65.0" translateY="14.0" />
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="9" translateX="50.0" translateY="41.0" />
+        <Slider fx:id="slider" max="254.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#slide" opacity="0.7" translateY="150.0" />
+    </children>
+</StackPane>
